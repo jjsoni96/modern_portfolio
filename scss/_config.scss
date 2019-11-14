@@ -1,13 +1,15 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image: true;
-$home-image: url(../dist/img/background_image.jpg);
+$home-image: url(/dist/img/background_image.jpg);
 $background-opacity: 0.9;
 
+// to provide effects and styling to a particular button or some text
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
 
+// to customize background image
 @mixin background {
   @if $show-home-image {
     &#bg-img {
@@ -15,7 +17,8 @@ $background-opacity: 0.9;
       background-attachment: fixed;
       background-size: cover;
 
-      &::after {
+      // Psuedo element is treated like an actual element by css
+      &:after {
         content: "";
         position: absolute;
         top: 0;

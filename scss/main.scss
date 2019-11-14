@@ -1,10 +1,14 @@
+// to import partial files which helps render scss
 @import "config";
+@import "menu";
 
+// It adds box-sizing to the whole webpage
 * {
   box-sizing: border-box;
 }
 
 body {
+  // to include background image
   @include background;
   background: $primary-color;
   color: #fff;
